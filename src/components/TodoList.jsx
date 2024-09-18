@@ -1,7 +1,20 @@
 import React from 'react'
 
 export default function TodoList() {
-  return (
-    <div>TodoList</div>
+  let todos= [
+    'SaturdayHackNight',
+    'Godot',
+    'Tinkerday'
+  ]
+
+  return(
+    <ul>
+        {
+            todos.map((todo,todoIndex)=>{
+            return(
+                <li key={todoIndex}>{todo}</li>
+            )
+        })}
+    </ul>
   )
 }
