@@ -1,4 +1,5 @@
 import React from 'react'
+import TodoCards from './TodoCards'
 
 export default function TodoList() {
   let todos= [
@@ -8,11 +9,13 @@ export default function TodoList() {
   ]
 
   return(
-    <ul>
+    <ul className='main'>
         {
             todos.map((todo,todoIndex)=>{
             return(
-                <li key={todoIndex}>{todo}</li>
+                <TodoCards key={todoIndex}>
+                    <p>{todo}</p>
+                </TodoCards>
             )
         })}
     </ul>
